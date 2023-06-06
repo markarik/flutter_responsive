@@ -1,5 +1,4 @@
 import 'package:device_preview/device_preview.dart';
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:responsiveapp/large/homepageLarge.dart';
 import 'package:responsiveapp/medium/homepageMedium.dart';
@@ -10,10 +9,8 @@ import 'package:responsiveapp/util/responsive.dart';
 //   runApp(MyApp());
 // }
 void main() => runApp(
-      DevicePreview(
-        enabled: !kReleaseMode,
-        builder: (context) => MyApp(),
-      ),
+     MyApp(),
+      
     );
 
 class MyApp extends StatelessWidget {
@@ -21,7 +18,6 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      locale: DevicePreview.of(context).locale, // <--- /!\ Add the locale
       builder: DevicePreview.appBuilder, // <--- /!\ Add the builder
 
       title: 'Flutter Demo',
@@ -35,7 +31,7 @@ class MyApp extends StatelessWidget {
 }
 
 class MyHomePage extends StatefulWidget {
-  MyHomePage({Key key, this.title}) : super(key: key);
+  MyHomePage({Key? key, required this.title}) : super(key: key);
 
   final String title;
 
@@ -44,19 +40,12 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  int _counter = 0;
-
-  void _incrementCounter() {
-    setState(() {
-      _counter++;
-    });
-  }
-
+ 
   @override
   Widget build(BuildContext context) {
     var width = MediaQuery.of(context).size.width;
 
-    Widget widget;
+   late Widget widget;
     switch (getScreenSize(width)) {
       case ScreenSize.small:
         widget = HomePageSmall();

@@ -5,7 +5,7 @@ import '../model/places_data.dart';
 
 class PlaceDetails extends StatelessWidget {
   final Place place;
-  PlaceDetails({this.place});
+  PlaceDetails({required this.place});
 
   @override
   Widget build(BuildContext context) {

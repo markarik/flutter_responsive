@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:responsiveapp/model/place.dart';
 import 'package:responsiveapp/model/places_data.dart';

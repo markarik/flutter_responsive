@@ -1,8 +1,8 @@
 class Place {
   Place({
-    this.image,
-    this.title,
-    this.subtitle,
+    required this.image,
+    required this.title,
+    required this.subtitle,
   });
 
   final String image;
