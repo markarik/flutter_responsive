@@ -28,6 +28,8 @@ class PlacesGallery extends StatelessWidget {
     return Container(
       color: Colors.grey[200],
       child: GridView.count(
+                key: Key('GridViewKey'),
+
         crossAxisCount: itemCount,
         scrollDirection: axisDirection,
         mainAxisSpacing: 8,

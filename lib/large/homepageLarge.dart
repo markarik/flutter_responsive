@@ -12,7 +12,7 @@ class HomePageLarge extends StatefulWidget {
 
 class _HomePageLargeState extends State<HomePageLarge> {
    Place selectedPlace = Places().getPlaces()[0];
-  void handlePlaceChanged(Place newPlace) {
+  void  handlePlaceChanged(Place newPlace) {
     setState(() {
       selectedPlace = newPlace;
     });
